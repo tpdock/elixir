@@ -1,1 +1,1 @@
-docker push tpdock/elixir:all
+docker push tpdock/elixir:base
