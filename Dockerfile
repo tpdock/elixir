@@ -13,6 +13,7 @@ RUN git clone https://github.com/elixir-lang/elixir.git
 
 WORKDIR /root/elixir
 
+RUN git checkout v1.1.1; make clean; make; mkdir /usr/lib/elixir/1.1.1 -p; cp bin lib /usr/lib/elixir/1.1.1 -r;
 RUN git checkout v1.1.0; make clean; make; mkdir /usr/lib/elixir/1.1.0 -p; cp bin lib /usr/lib/elixir/1.1.0 -r;
 RUN git checkout v1.1.0-rc.0; make clean; make; mkdir /usr/lib/elixir/1.1.0-rc.0 -p; cp bin lib /usr/lib/elixir/1.1.0-rc.0 -r;
 RUN git checkout v1.1.0-beta; make clean; make; mkdir /usr/lib/elixir/1.1.0-beta -p; cp bin lib /usr/lib/elixir/1.1.0-beta -r;
@@ -29,4 +30,4 @@ RUN /root/prepare.sh
 #RUN mix local.hex --force
 ADD https://s3.amazonaws.com/s3.hex.pm/installs/1.0.0/hex.ez /root/.mix/archives/hex.ez
 
-CMD . elixir-1.1.0;bash
+CMD . elixir-1.1.1;bash
