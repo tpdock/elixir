@@ -1,1 +1,1 @@
-docker run -it --rm tpdock/elixir:base
+docker run -it --rm tpdock/elixir:last
