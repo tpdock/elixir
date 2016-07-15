@@ -1,6 +1,6 @@
 #!/bin/bash
 
-a=("1.2.0" "1.1.1" "1.1.0")
+a=("1.3.0" "1.2.0" "1.1.1" "1.1.0")
 for v in "${a[@]}"
 do
 #echo "alias elixir-$v='source /usr/lib/elixir/$v/activate'" >> /root/.bash_aliases
